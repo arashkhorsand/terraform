@@ -15,10 +15,10 @@ provider "aws" {
 
 resource "aws_instance" "terr-1" {
     ami     =  var.ami_id #variable in variables.tf
-    key_name = "docker-server"
+    key_name = var.key_name #variable key_name in variables.tf
     instance_type= "t2.micro" #for t2.micro aws
     tags = {
     Name= "arash-terr"
     created_by = "Arash"
-    }    
+    }   
 }
