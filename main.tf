@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "terr-1" {
-    ami     = "ami-0c4596ce1e7ae3e68" #last ubuntu ami_id in aws
+    ami     =  var.ami_id #variable in variables.tf
     key_name = "docker-server"
     instance_type= "t2.micro" #for t2.micro aws
     tags = {
