@@ -1,7 +1,7 @@
 terraform {
       backend "s3" {
     bucket = "terraform-arash"
-    key    = "path/terraform"
+    key    = "path/terraform.tfstate"
     region = "ca-central-1"
   }
   required_providers {
