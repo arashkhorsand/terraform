@@ -1,4 +1,9 @@
 terraform {
+      backend "s3" {
+    bucket = "terraform-arash"
+    key    = "path/terraform"
+    region = "ca-central-1"
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
